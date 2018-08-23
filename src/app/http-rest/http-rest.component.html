@@ -1,0 +1,13 @@
+
+
+<img [src]="imageUrl | testPipe" (click)="changeImage()"><br>
+User id: <input type="text"  #txt >
+<button (click)="getUser(txt.value)"> Submit </button> 
+<div *ngIf = "users">
+    <p #usernm >Name:  {{users.name  }}</p>   
+    <p> City: {{users.address.city   }}</p>
+
+    <ul *ngFor="let todo of toDosFiltered">
+        <li>{{todo.title }}</li>
+    </ul>
+</div>
