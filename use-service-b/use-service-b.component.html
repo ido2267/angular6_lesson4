@@ -1,0 +1,18 @@
+
+
+<table border="1">
+<th>User name</th> <th  > To do lists:</th>
+<tr *ngFor =  " let userData of currArray" >
+
+  <td>{{userData.UserObjName}}  <br>  </td> 
+  <table border="1">
+   <tr  *ngFor = "let todoTitle of todoArray|todoPipe:userData.UserObjUserId">
+
+  <td >
+  {{todoTitle}}
+  </td>
+   </tr>
+
+  </table>
+</tr>
+</table>
